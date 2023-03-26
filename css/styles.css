@@ -15,14 +15,17 @@
   height: 384px;
   position: relative;
   margin: 0 auto;
+  background: #000;
+  width: 700px;
+  padding: 0 50px;
 }
 
 .block {
   width: 28px;
   position: absolute;
-  left: 0;
+  left: auto;
   bottom: 0;
-  background-color: #58b7ff;
+  background-color: #abd6e6;
   transition: 0.2s all ease;
 }
 

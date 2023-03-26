@@ -1,6 +1,6 @@
 console.log("linked!");
 
-const dataContainer = document.querySelector(".data-Container");
+const container = document.querySelector(".data-container");
 
 function generateBlocks(num = 20) {
   if (num && typeof num !== "number") {
@@ -20,7 +20,7 @@ function generateBlocks(num = 20) {
     blockLabel.innerHTML = value;
 
     block.appendChild(blockLabel);
-    dataContainer.appendChild(block);
+    container.appendChild(block);
   }
 }
 
@@ -38,7 +38,7 @@ function swap(el1, el2) {
     // Wait for the transition to end!
     window.requestAnimationFrame(function () {
       setTimeout(() => {
-        dataContainer.insertBefore(el2, el1);
+        container.insertBefore(el2, el1);
         resolve();
       }, 250);
     });
