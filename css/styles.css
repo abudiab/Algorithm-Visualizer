@@ -35,3 +35,17 @@
   width: 100%;
   text-align: center;
 }
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+}
+button {
+  width: 20%;
+  display: inline-block;
+}
+
+label {
+  width: 40%;
+  display: inline-block;
+}

@@ -1,6 +1,8 @@
 console.log("linked!");
 
 const container = document.querySelector(".data-container");
+const randomize = document.getElementById("randomize");
+const solve = document.getElementById("solve");
 
 function generateBlocks(num = 20) {
   if (num && typeof num !== "number") {
@@ -77,6 +79,9 @@ async function bubbleSort(delay = 100) {
     blocks[blocks.length - i - 1].style.backgroundColor = "#13CE66";
   }
 }
+
+// randomize.addEventListener("click", () => generateBlocks());
+// solve.addEventListener("click", () => bubbleSort());
 
 generateBlocks();
 bubbleSort();
