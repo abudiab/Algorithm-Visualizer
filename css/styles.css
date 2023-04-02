@@ -48,7 +48,14 @@ button {
   display: inline-block;
 }
 
-label {
-  width: 40%;
+.range-slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+}
+
+.range-slider label {
+  width: 80%;
   display: inline-block;
 }

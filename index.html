@@ -18,7 +18,7 @@
           </button>
           <button class="button contrast outline" id="solve">Solve</button>
           <!-- Range slider -->
-          <label for="range"
+          <!-- <label for="range"
             >Array Size
             <input
               type="range"
@@ -28,7 +28,22 @@
               id="range"
               name="range"
             />
-          </label>
+          </label> -->
+          <div class="range-slider">
+            <div class="value-left">0</div>
+            <label for="range"
+              >Array Size
+              <input
+                type="range"
+                min="0"
+                max="30"
+                value="20"
+                id="range"
+                name="range"
+              />
+            </label>
+            <div class="value-right">30</div>
+          </div>
         </div>
         <div class="data-container"></div>
       </section>
