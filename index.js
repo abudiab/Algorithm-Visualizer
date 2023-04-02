@@ -15,7 +15,7 @@ slider.oninput = () => {
 };
 
 function generateBlocks() {
-  size = arraySize || 30;
+  let size = arraySize || 30;
   console.log(size);
   if (size && typeof size !== "number") {
     alert("First argument must be a typeof Number");
