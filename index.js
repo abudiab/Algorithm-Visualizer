@@ -98,6 +98,7 @@ async function bubbleSort(delay = 100) {
     blocks[blocks.length - i - 1].style.backgroundColor = "#90ee90";
   }
   isSorting = false; // set flag to false to indicate that sorting has completed
+  blocks[0].style.backgroundColor = "#90ee90";
 }
 
 function reset() {
