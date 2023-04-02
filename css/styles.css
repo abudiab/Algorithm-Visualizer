@@ -48,6 +48,10 @@ button {
   display: inline-block;
 }
 
+button:hover {
+  background: lightblue;
+}
+
 .range-slider {
   display: flex;
   justify-content: space-between;
