@@ -4,13 +4,24 @@ const container = document.querySelector(".data-container");
 const randomize = document.getElementById("randomize");
 const solve = document.getElementById("solve");
 let isSorting = false; // flag to track whether sorting is currently being executed
+const slider = document.querySelector("#slider");
+let arraySizeDisplay = document.querySelector("#array-size");
+let arraySize = Number(slider.value);
 
-function generateBlocks(num = 30) {
-  if (num && typeof num !== "number") {
+slider.oninput = () => {
+  let value = slider.value;
+  arraySizeDisplay.textContent = value;
+  arraySize = Number(value);
+};
+
+function generateBlocks() {
+  size = arraySize || 30;
+  console.log(size);
+  if (size && typeof size !== "number") {
     alert("First argument must be a typeof Number");
     return;
   }
-  for (let i = 0; i < num; i += 1) {
+  for (let i = 0; i < size; i += 1) {
     const value = Math.floor(Math.random() * 100);
 
     const block = document.createElement("div");
