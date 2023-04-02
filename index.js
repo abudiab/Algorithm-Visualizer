@@ -3,6 +3,7 @@ console.log("linked!");
 const container = document.querySelector(".data-container");
 const randomize = document.getElementById("randomize");
 const solve = document.getElementById("solve");
+let isSorting = false; // flag to track whether sorting is currently being executed
 
 function generateBlocks(num = 20) {
   if (num && typeof num !== "number") {
@@ -52,6 +53,13 @@ async function bubbleSort(delay = 100) {
     alert("sort: First argument must be a typeof Number");
     return;
   }
+  if (isSorting) {
+    console.log("sorting in progress!");
+    // prevent multiple executions of bubbleSort
+    return;
+  }
+  isSorting = true; // set flag to true to indicate that sorting is currently being executed
+
   let blocks = document.querySelectorAll(".block");
   for (let i = 0; i < blocks.length - 1; i += 1) {
     for (let j = 0; j < blocks.length - i - 1; j += 1) {
@@ -78,10 +86,21 @@ async function bubbleSort(delay = 100) {
 
     blocks[blocks.length - i - 1].style.backgroundColor = "#13CE66";
   }
+  isSorting = false; // set flag to false to indicate that sorting has completed
 }
 
-// randomize.addEventListener("click", () => generateBlocks());
-// solve.addEventListener("click", () => bubbleSort());
+function reset() {
+  container.innerHTML = null;
+  isSorting = false; // set flag to false to ensure that sorting is not currently
+}
 
-generateBlocks();
-bubbleSort();
+randomize.addEventListener("click", () => {
+  reset();
+  generateBlocks();
+});
+solve.addEventListener("click", () => {
+  if (container.children.length == 0) {
+    return;
+  }
+  bubbleSort();
+});
