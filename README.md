@@ -11,6 +11,8 @@ This is a small project that shows/visualizes how sorting algorithms work.
 
 ## Demo
 
+https://abudiab.github.io/Algorithm-Visualizer/
+
 ![Demo](https://raw.githubusercontent.com/abudiab/Algorithm-Visualizer/main/assets/demo.gif)
 
 ## Screenshots
