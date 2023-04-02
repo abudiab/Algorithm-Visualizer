@@ -5,7 +5,7 @@ const randomize = document.getElementById("randomize");
 const solve = document.getElementById("solve");
 let isSorting = false; // flag to track whether sorting is currently being executed
 
-function generateBlocks(num = 20) {
+function generateBlocks(num = 30) {
   if (num && typeof num !== "number") {
     alert("First argument must be a typeof Number");
     return;
@@ -63,8 +63,8 @@ async function bubbleSort(delay = 100) {
   let blocks = document.querySelectorAll(".block");
   for (let i = 0; i < blocks.length - 1; i += 1) {
     for (let j = 0; j < blocks.length - i - 1; j += 1) {
-      blocks[j].style.backgroundColor = "#FF4949";
-      blocks[j + 1].style.backgroundColor = "#FF4949";
+      blocks[j].style.backgroundColor = "#ea6666";
+      blocks[j + 1].style.backgroundColor = "#ea6666";
 
       await new Promise((resolve) =>
         setTimeout(() => {
@@ -80,11 +80,11 @@ async function bubbleSort(delay = 100) {
         blocks = document.querySelectorAll(".block");
       }
 
-      blocks[j].style.backgroundColor = "#58B7FF";
-      blocks[j + 1].style.backgroundColor = "#58B7FF";
+      blocks[j].style.backgroundColor = "#bad7e9";
+      blocks[j + 1].style.backgroundColor = "#bad7e9";
     }
 
-    blocks[blocks.length - i - 1].style.backgroundColor = "#13CE66";
+    blocks[blocks.length - i - 1].style.backgroundColor = "#90ee90";
   }
   isSorting = false; // set flag to false to indicate that sorting has completed
 }
